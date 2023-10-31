@@ -1,0 +1,1797 @@
+TimeQuest Timing Analyzer report for Mod_Teste
+Fri Jul 05 11:05:40 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLOCK_50'
+ 12. Slow Model Setup: 'MDF:comb_79|CLK_OUT'
+ 13. Slow Model Hold: 'CLOCK_50'
+ 14. Slow Model Hold: 'MDF:comb_79|CLK_OUT'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 16. Slow Model Minimum Pulse Width: 'MDF:comb_79|CLK_OUT'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Propagation Delay
+ 22. Minimum Propagation Delay
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'CLOCK_50'
+ 29. Fast Model Setup: 'MDF:comb_79|CLK_OUT'
+ 30. Fast Model Hold: 'CLOCK_50'
+ 31. Fast Model Hold: 'MDF:comb_79|CLK_OUT'
+ 32. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 33. Fast Model Minimum Pulse Width: 'MDF:comb_79|CLK_OUT'
+ 34. Setup Times
+ 35. Hold Times
+ 36. Clock to Output Times
+ 37. Minimum Clock to Output Times
+ 38. Propagation Delay
+ 39. Minimum Propagation Delay
+ 40. Multicorner Timing Analysis Summary
+ 41. Setup Times
+ 42. Hold Times
+ 43. Clock to Output Times
+ 44. Minimum Clock to Output Times
+ 45. Progagation Delay
+ 46. Minimum Progagation Delay
+ 47. Setup Transfers
+ 48. Hold Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                       ;
++--------------------+----------------------------------------------------+
+; Quartus II Version ; Version 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
+; Revision Name      ; Mod_Teste                                          ;
+; Device Family      ; Cyclone II                                         ;
+; Device Name        ; EP2C35F672C6                                       ;
+; Timing Models      ; Final                                              ;
+; Delay Model        ; Combined                                           ;
+; Rise/Fall Delays   ; Unavailable                                        ;
++--------------------+----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                   ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; Clock Name          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                 ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+; CLOCK_50            ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }            ;
+; MDF:comb_79|CLK_OUT ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { MDF:comb_79|CLK_OUT } ;
++---------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-------------------------+
+
+
++-----------------------------------------------------------+
+; Slow Model Fmax Summary                                   ;
++------------+-----------------+---------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
++------------+-----------------+---------------------+------+
+; 259.94 MHz ; 259.94 MHz      ; CLOCK_50            ;      ;
+; 468.16 MHz ; 468.16 MHz      ; MDF:comb_79|CLK_OUT ;      ;
++------------+-----------------+---------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++----------------------------------------------+
+; Slow Model Setup Summary                     ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK_50            ; -2.847 ; -130.644      ;
+; MDF:comb_79|CLK_OUT ; -1.136 ; -5.212        ;
++---------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Slow Model Hold Summary                      ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK_50            ; -2.523 ; -2.523        ;
+; MDF:comb_79|CLK_OUT ; 0.391  ; 0.000         ;
++---------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------+
+; Slow Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK_50            ; -1.380 ; -79.380       ;
+; MDF:comb_79|CLK_OUT ; -0.500 ; -8.000        ;
++---------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                                                                         ;
++--------+-------------------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                  ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; -2.847 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.888      ;
+; -2.733 ; MDF:comb_79|CONT[1]                 ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.774      ;
+; -2.732 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.775      ;
+; -2.720 ; SEMAFORO:comb_80|state.00           ; LCD_TEST:u5|mLCD_DATA[6] ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 1.000        ; 0.076      ; 3.832      ;
+; -2.702 ; MDF:comb_79|CONT[2]                 ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.743      ;
+; -2.699 ; LCD_TEST:u5|LUT_INDEX[4]            ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 3.724      ;
+; -2.689 ; MDF:comb_79|CONT[6]                 ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.725      ;
+; -2.630 ; MDF:comb_79|CONT[3]                 ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.671      ;
+; -2.623 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.664      ;
+; -2.618 ; MDF:comb_79|CONT[1]                 ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.661      ;
+; -2.611 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.652      ;
+; -2.595 ; LCD_TEST:u5|LUT_INDEX[3]            ; LCD_TEST:u5|mLCD_DATA[6] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.632      ;
+; -2.590 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.633      ;
+; -2.590 ; LCD_TEST:u5|LUT_INDEX[3]            ; LCD_TEST:u5|mLCD_DATA[5] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.627      ;
+; -2.587 ; MDF:comb_79|CONT[2]                 ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.630      ;
+; -2.574 ; MDF:comb_79|CONT[6]                 ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.002      ; 3.612      ;
+; -2.564 ; SEMAFORO:comb_80|state.00           ; LCD_TEST:u5|mLCD_DATA[5] ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 1.000        ; 0.076      ; 3.676      ;
+; -2.545 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.586      ;
+; -2.528 ; LCD_TEST:u5|LUT_INDEX[0]            ; LCD_TEST:u5|mLCD_DATA[2] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.009     ; 3.555      ;
+; -2.520 ; MDF:comb_79|CONT[4]                 ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.561      ;
+; -2.515 ; MDF:comb_79|CONT[3]                 ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.558      ;
+; -2.509 ; SEMAFORO:comb_80|state.01~_emulated ; LCD_TEST:u5|mLCD_DATA[5] ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 1.000        ; 0.076      ; 3.621      ;
+; -2.509 ; MDF:comb_79|CONT[1]                 ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.550      ;
+; -2.502 ; LCD_TEST:u5|LUT_INDEX[0]            ; LCD_TEST:u5|mLCD_DATA[0] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.010     ; 3.528      ;
+; -2.498 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.541      ;
+; -2.497 ; MDF:comb_79|CONT[1]                 ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.538      ;
+; -2.490 ; LCD_TEST:u5|LUT_INDEX[2]            ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 3.515      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[0]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[1]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[2]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[3]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[4]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[5]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[6]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[7]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.489 ; LCD_TEST:u5|mDLY[14]                ; LCD_TEST:u5|mDLY[8]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.531      ;
+; -2.478 ; MDF:comb_79|CONT[2]                 ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.519      ;
+; -2.476 ; MDF:comb_79|CONT[1]                 ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.519      ;
+; -2.468 ; LCD_TEST:u5|LUT_INDEX[2]            ; LCD_TEST:u5|mLCD_DATA[6] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.505      ;
+; -2.466 ; MDF:comb_79|CONT[2]                 ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.507      ;
+; -2.465 ; MDF:comb_79|CONT[6]                 ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.501      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[0]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[1]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[2]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[3]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[4]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[5]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[6]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[7]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.457 ; LCD_TEST:u5|mDLY[16]                ; LCD_TEST:u5|mDLY[8]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.499      ;
+; -2.455 ; LCD_TEST:u5|LUT_INDEX[1]            ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 3.480      ;
+; -2.453 ; MDF:comb_79|CONT[6]                 ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.489      ;
+; -2.453 ; LCD_TEST:u5|LUT_INDEX[3]            ; LCD_TEST:u5|mLCD_DATA[0] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.010     ; 3.479      ;
+; -2.445 ; MDF:comb_79|CONT[2]                 ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.488      ;
+; -2.434 ; LCD_TEST:u5|LUT_INDEX[0]            ; LCD_TEST:u5|mLCD_DATA[6] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.471      ;
+; -2.433 ; LCD_TEST:u5|LUT_INDEX[0]            ; LCD_TEST:u5|mLCD_DATA[5] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.470      ;
+; -2.432 ; MDF:comb_79|CONT[6]                 ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.002      ; 3.470      ;
+; -2.431 ; MDF:comb_79|CONT[1]                 ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.472      ;
+; -2.419 ; LCD_TEST:u5|LUT_INDEX[4]            ; LCD_TEST:u5|mLCD_DATA[3] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.008     ; 3.447      ;
+; -2.410 ; MDF:comb_79|CONT[0]                 ; MDF:comb_79|CONT[25]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.453      ;
+; -2.409 ; SEMAFORO:comb_80|state.01~_emulated ; LCD_TEST:u5|mLCD_DATA[6] ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 1.000        ; 0.076      ; 3.521      ;
+; -2.406 ; MDF:comb_79|CONT[3]                 ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.447      ;
+; -2.405 ; MDF:comb_79|CONT[4]                 ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.448      ;
+; -2.400 ; MDF:comb_79|CONT[2]                 ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.441      ;
+; -2.399 ; MDF:comb_79|CONT[25]                ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.007     ; 3.428      ;
+; -2.398 ; MDF:comb_79|CONT[25]                ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.007     ; 3.427      ;
+; -2.395 ; MDF:comb_79|CONT[5]                 ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.436      ;
+; -2.395 ; LCD_TEST:u5|LUT_INDEX[4]            ; LCD_TEST:u5|mLCD_DATA[6] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.432      ;
+; -2.394 ; MDF:comb_79|CONT[3]                 ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.435      ;
+; -2.390 ; LCD_TEST:u5|LUT_INDEX[4]            ; LCD_TEST:u5|mLCD_DATA[5] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.427      ;
+; -2.389 ; MDF:comb_79|CONT[11]                ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.425      ;
+; -2.388 ; MDF:comb_79|CONT[11]                ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.424      ;
+; -2.387 ; MDF:comb_79|CONT[6]                 ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.423      ;
+; -2.386 ; MDF:comb_79|CONT[20]                ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.007     ; 3.415      ;
+; -2.385 ; MDF:comb_79|CONT[20]                ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.007     ; 3.414      ;
+; -2.384 ; MDF:comb_79|CONT[1]                 ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.427      ;
+; -2.375 ; LCD_TEST:u5|LUT_INDEX[0]            ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 3.400      ;
+; -2.373 ; MDF:comb_79|CONT[3]                 ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.416      ;
+; -2.370 ; MDF:comb_79|CONT[7]                 ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.406      ;
+; -2.369 ; MDF:comb_79|CONT[7]                 ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.405      ;
+; -2.353 ; MDF:comb_79|CONT[2]                 ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.007      ; 3.396      ;
+; -2.351 ; LCD_TEST:u5|LUT_INDEX[2]            ; LCD_TEST:u5|mLCD_DATA[5] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 3.388      ;
+; -2.351 ; MDF:comb_79|CONT[24]                ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.007     ; 3.380      ;
+; -2.350 ; MDF:comb_79|CONT[24]                ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.007     ; 3.379      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[0]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[1]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[2]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[3]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[4]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[5]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[6]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[7]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.343 ; LCD_TEST:u5|mDLY[13]                ; LCD_TEST:u5|mDLY[8]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 3.385      ;
+; -2.341 ; MDF:comb_79|CONT[12]                ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.377      ;
+; -2.340 ; MDF:comb_79|CONT[6]                 ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.002      ; 3.378      ;
+; -2.340 ; MDF:comb_79|CONT[12]                ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 3.376      ;
+; -2.328 ; MDF:comb_79|CONT[3]                 ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.005      ; 3.369      ;
+; -2.327 ; LCD_TEST:u5|LUT_INDEX[1]            ; LCD_TEST:u5|mLCD_DATA[2] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.009     ; 3.354      ;
+; -2.323 ; SEMAFORO:comb_80|state.01~_emulated ; LCD_TEST:u5|mLCD_DATA[1] ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 1.000        ; 0.064      ; 3.423      ;
+; -2.320 ; LCD_TEST:u5|LUT_INDEX[0]            ; LCD_TEST:u5|mLCD_DATA[3] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.008     ; 3.348      ;
++--------+-------------------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'MDF:comb_79|CLK_OUT'                                                                                                                                 ;
++--------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; -1.136 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.172      ;
+; -1.069 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.105      ;
+; -1.040 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.076      ;
+; -1.031 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.067      ;
+; -1.019 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.055      ;
+; -1.016 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.052      ;
+; -0.993 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.029      ;
+; -0.985 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 2.021      ;
+; -0.954 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.990      ;
+; -0.941 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.977      ;
+; -0.913 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.949      ;
+; -0.900 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.936      ;
+; -0.869 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.905      ;
+; -0.861 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.897      ;
+; -0.817 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.853      ;
+; -0.798 ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.834      ;
+; -0.791 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.827      ;
+; -0.762 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.798      ;
+; -0.739 ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.775      ;
+; -0.706 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.742      ;
+; -0.678 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.714      ;
+; -0.676 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.712      ;
+; -0.560 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.596      ;
+; -0.515 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.551      ;
+; -0.469 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.505      ;
+; -0.397 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.433      ;
+; -0.330 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.366      ;
+; -0.278 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.314      ;
+; -0.063 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.099      ;
+; 0.025  ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.011      ;
+; 0.379  ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[0]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.657      ;
++--------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                                                                                           ;
++--------+----------------------------------------+----------------------------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+---------------------+-------------+--------------+------------+------------+
+; -2.523 ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 0.000        ; 2.664      ; 0.657      ;
+; -2.023 ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; -0.500       ; 2.664      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_ST.000010             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391  ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.534  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.800      ;
+; 0.534  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.800      ;
+; 0.546  ; LCD_TEST:u5|mLCD_ST.000011             ; LCD_TEST:u5|mLCD_ST.000000             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.812      ;
+; 0.547  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_Start                 ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.813      ;
+; 0.568  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.834      ;
+; 0.668  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|oDone    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.934      ;
+; 0.688  ; LCD_TEST:u5|mLCD_ST.000001             ; LCD_TEST:u5|mLCD_Start                 ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.954      ;
+; 0.698  ; LCD_TEST:u5|mLCD_Start                 ; LCD_TEST:u5|LCD_Controller:u0|preStart ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.964      ;
+; 0.728  ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 0.993      ;
+; 0.729  ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 0.994      ;
+; 0.788  ; LCD_TEST:u5|mDLY[0]                    ; LCD_TEST:u5|mDLY[0]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.054      ;
+; 0.793  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_ST.000011             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.059      ;
+; 0.797  ; LCD_TEST:u5|mDLY[9]                    ; LCD_TEST:u5|mDLY[9]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.063      ;
+; 0.799  ; LCD_TEST:u5|mDLY[10]                   ; LCD_TEST:u5|mDLY[10]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.065      ;
+; 0.802  ; MDF:comb_79|CONT[4]                    ; MDF:comb_79|CONT[4]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.802  ; MDF:comb_79|CONT[8]                    ; MDF:comb_79|CONT[8]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.068      ;
+; 0.805  ; MDF:comb_79|CONT[10]                   ; MDF:comb_79|CONT[10]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805  ; MDF:comb_79|CONT[15]                   ; MDF:comb_79|CONT[15]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.071      ;
+; 0.805  ; LCD_TEST:u5|mDLY[2]                    ; LCD_TEST:u5|mDLY[2]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.071      ;
+; 0.806  ; MDF:comb_79|CONT[1]                    ; MDF:comb_79|CONT[1]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; MDF:comb_79|CONT[17]                   ; MDF:comb_79|CONT[17]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.806  ; LCD_TEST:u5|mDLY[4]                    ; LCD_TEST:u5|mDLY[4]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.810  ; LCD_TEST:u5|mDLY[6]                    ; LCD_TEST:u5|mDLY[6]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810  ; LCD_TEST:u5|mDLY[7]                    ; LCD_TEST:u5|mDLY[7]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.810  ; LCD_TEST:u5|LCD_Controller:u0|preStart ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.076      ;
+; 0.813  ; LCD_TEST:u5|mDLY[11]                   ; LCD_TEST:u5|mDLY[11]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.079      ;
+; 0.814  ; LCD_TEST:u5|mDLY[8]                    ; LCD_TEST:u5|mDLY[8]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.814  ; LCD_TEST:u5|mDLY[13]                   ; LCD_TEST:u5|mDLY[13]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.814  ; LCD_TEST:u5|mDLY[16]                   ; LCD_TEST:u5|mDLY[16]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.080      ;
+; 0.815  ; LCD_TEST:u5|LCD_Controller:u0|oDone    ; LCD_TEST:u5|mLCD_ST.000010             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.081      ;
+; 0.820  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_ST.000001             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.086      ;
+; 0.821  ; LCD_TEST:u5|mLCD_ST.000011             ; LCD_TEST:u5|mLCD_Start                 ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.087      ;
+; 0.834  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 1.101      ;
+; 0.835  ; MDF:comb_79|CONT[23]                   ; MDF:comb_79|CONT[23]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.101      ;
+; 0.835  ; MDF:comb_79|CONT[25]                   ; MDF:comb_79|CONT[25]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.101      ;
+; 0.837  ; MDF:comb_79|CONT[5]                    ; MDF:comb_79|CONT[5]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.103      ;
+; 0.838  ; LCD_TEST:u5|mDLY[17]                   ; LCD_TEST:u5|mDLY[17]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.104      ;
+; 0.841  ; LCD_TEST:u5|LUT_INDEX[4]               ; LCD_TEST:u5|LUT_INDEX[4]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.107      ;
+; 0.842  ; MDF:comb_79|CONT[3]                    ; MDF:comb_79|CONT[3]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842  ; MDF:comb_79|CONT[7]                    ; MDF:comb_79|CONT[7]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842  ; MDF:comb_79|CONT[9]                    ; MDF:comb_79|CONT[9]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; LCD_TEST:u5|LCD_Controller:u0|oDone    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.108      ;
+; 0.843  ; MDF:comb_79|CONT[2]                    ; MDF:comb_79|CONT[2]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.109      ;
+; 0.844  ; LCD_TEST:u5|mDLY[1]                    ; LCD_TEST:u5|mDLY[1]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.110      ;
+; 0.844  ; LCD_TEST:u5|mDLY[12]                   ; LCD_TEST:u5|mDLY[12]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.110      ;
+; 0.845  ; LCD_TEST:u5|mDLY[3]                    ; LCD_TEST:u5|mDLY[3]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.111      ;
+; 0.845  ; LCD_TEST:u5|mDLY[14]                   ; LCD_TEST:u5|mDLY[14]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.111      ;
+; 0.845  ; LCD_TEST:u5|LUT_INDEX[1]               ; LCD_TEST:u5|LUT_INDEX[1]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.111      ;
+; 0.846  ; MDF:comb_79|CONT[0]                    ; MDF:comb_79|CONT[0]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.846  ; LCD_TEST:u5|mDLY[5]                    ; LCD_TEST:u5|mDLY[5]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.846  ; LCD_TEST:u5|mDLY[15]                   ; LCD_TEST:u5|mDLY[15]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.112      ;
+; 0.853  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.119      ;
+; 0.854  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.120      ;
+; 0.859  ; LCD_TEST:u5|LUT_INDEX[5]               ; LCD_TEST:u5|LUT_INDEX[5]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.125      ;
+; 0.860  ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.126      ;
+; 0.864  ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.130      ;
+; 0.869  ; LCD_TEST:u5|mLCD_Start                 ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.135      ;
+; 0.870  ; LCD_TEST:u5|mLCD_ST.000001             ; LCD_TEST:u5|mLCD_ST.000010             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.136      ;
+; 0.891  ; LCD_TEST:u5|LUT_INDEX[2]               ; LCD_TEST:u5|LUT_INDEX[2]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.157      ;
+; 0.893  ; LCD_TEST:u5|LUT_INDEX[3]               ; LCD_TEST:u5|LUT_INDEX[3]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.159      ;
+; 0.901  ; LCD_TEST:u5|LUT_INDEX[0]               ; LCD_TEST:u5|LUT_INDEX[0]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.167      ;
+; 0.944  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.210      ;
+; 0.944  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.210      ;
+; 0.989  ; LCD_TEST:u5|LUT_INDEX[5]               ; LCD_TEST:u5|mLCD_DATA[6]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 1.256      ;
+; 0.996  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 1.263      ;
+; 0.999  ; LCD_TEST:u5|LUT_INDEX[3]               ; LCD_TEST:u5|mLCD_DATA[5]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 1.266      ;
+; 1.079  ; LCD_TEST:u5|mLCD_ST.000011             ; LCD_TEST:u5|mLCD_ST.000001             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.080  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.345      ;
+; 1.106  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.372      ;
+; 1.117  ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.382      ;
+; 1.153  ; LCD_TEST:u5|LUT_INDEX[4]               ; LCD_TEST:u5|mLCD_DATA[5]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 1.420      ;
+; 1.169  ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 1.434      ;
+; 1.180  ; LCD_TEST:u5|mDLY[9]                    ; LCD_TEST:u5|mDLY[10]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.446      ;
+; 1.182  ; LCD_TEST:u5|mDLY[10]                   ; LCD_TEST:u5|mDLY[11]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.448      ;
+; 1.185  ; MDF:comb_79|CONT[8]                    ; MDF:comb_79|CONT[9]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.451      ;
+; 1.188  ; LCD_TEST:u5|mDLY[2]                    ; LCD_TEST:u5|mDLY[3]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.454      ;
+; 1.189  ; MDF:comb_79|CONT[1]                    ; MDF:comb_79|CONT[2]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.189  ; LCD_TEST:u5|mDLY[4]                    ; LCD_TEST:u5|mDLY[5]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.455      ;
+; 1.190  ; MDF:comb_79|CONT[22]                   ; MDF:comb_79|CONT[23]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.456      ;
+; 1.190  ; MDF:comb_79|CONT[24]                   ; MDF:comb_79|CONT[25]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.456      ;
+; 1.193  ; LCD_TEST:u5|mDLY[6]                    ; LCD_TEST:u5|mDLY[7]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.459      ;
+; 1.193  ; LCD_TEST:u5|mDLY[7]                    ; LCD_TEST:u5|mDLY[8]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.459      ;
+; 1.196  ; LCD_TEST:u5|mDLY[11]                   ; LCD_TEST:u5|mDLY[12]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 1.462      ;
++--------+----------------------------------------+----------------------------------------+---------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'MDF:comb_79|CLK_OUT'                                                                                                                                 ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; 0.391 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[0]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.657      ;
+; 0.745 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.011      ;
+; 0.833 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.099      ;
+; 1.048 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.314      ;
+; 1.100 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.366      ;
+; 1.167 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.433      ;
+; 1.239 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.505      ;
+; 1.285 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.551      ;
+; 1.320 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.586      ;
+; 1.330 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.596      ;
+; 1.406 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.672      ;
+; 1.433 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.699      ;
+; 1.446 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.712      ;
+; 1.448 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.714      ;
+; 1.507 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.773      ;
+; 1.509 ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.775      ;
+; 1.532 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.798      ;
+; 1.539 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.805      ;
+; 1.560 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.826      ;
+; 1.566 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.832      ;
+; 1.568 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.834      ;
+; 1.568 ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.834      ;
+; 1.592 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.858      ;
+; 1.626 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.892      ;
+; 1.629 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.895      ;
+; 1.639 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.905      ;
+; 1.646 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.912      ;
+; 1.651 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.917      ;
+; 1.696 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.962      ;
+; 1.704 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.970      ;
+; 1.708 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 1.974      ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|mStart   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|mStart   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|oDone    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|oDone    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|preStart ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|preStart ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[0]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[0]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[10]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[10]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[11]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[11]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[12]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[12]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[13]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[13]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[14]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[14]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[15]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[15]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[16]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[16]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[17]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[17]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[1]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[1]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[2]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[2]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[3]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[3]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[4]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[4]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[5]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[5]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[6]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[6]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[7]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[7]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[8]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[8]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[9]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[9]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[7]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[7]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_RS                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_RS                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000000             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000000             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000001             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000001             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000010             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000010             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000011             ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'MDF:comb_79|CLK_OUT'                                                                              ;
++--------+--------------+----------------+------------------+---------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock               ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+---------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[2]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[2]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[3]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[3]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.00           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.00           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.01~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.01~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.10           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.10           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.11~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.11~_emulated ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[2]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[2]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[3]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[3]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.00|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.00|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.01~_emulated|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.01~_emulated|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.10|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.10|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.11~_emulated|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.11~_emulated|clk      ;
++--------+--------------+----------------+------------------+---------------------+------------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; KEY[*]    ; CLOCK_50            ; 7.999 ; 7.999 ; Rise       ; CLOCK_50            ;
+;  KEY[0]   ; CLOCK_50            ; 7.999 ; 7.999 ; Rise       ; CLOCK_50            ;
+;  KEY[1]   ; CLOCK_50            ; 7.620 ; 7.620 ; Rise       ; CLOCK_50            ;
+; KEY[*]    ; MDF:comb_79|CLK_OUT ; 6.916 ; 6.916 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[0]   ; MDF:comb_79|CLK_OUT ; 6.916 ; 6.916 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[1]   ; MDF:comb_79|CLK_OUT ; 6.537 ; 6.537 ; Rise       ; MDF:comb_79|CLK_OUT ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Hold Times                                                                           ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; KEY[*]    ; CLOCK_50            ; -6.593 ; -6.593 ; Rise       ; CLOCK_50            ;
+;  KEY[0]   ; CLOCK_50            ; -6.593 ; -6.593 ; Rise       ; CLOCK_50            ;
+;  KEY[1]   ; CLOCK_50            ; -6.675 ; -6.675 ; Rise       ; CLOCK_50            ;
+; KEY[*]    ; MDF:comb_79|CLK_OUT ; -5.254 ; -5.254 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[0]   ; MDF:comb_79|CLK_OUT ; -5.254 ; -5.254 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[1]   ; MDF:comb_79|CLK_OUT ; -5.387 ; -5.387 ; Rise       ; MDF:comb_79|CLK_OUT ;
++-----------+---------------------+--------+--------+------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++--------------+---------------------+--------+--------+------------+---------------------+
+; Data Port    ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++--------------+---------------------+--------+--------+------------+---------------------+
+; LCD_DATA[*]  ; CLOCK_50            ; 9.494  ; 9.494  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[0] ; CLOCK_50            ; 8.931  ; 8.931  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[1] ; CLOCK_50            ; 9.193  ; 9.193  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[2] ; CLOCK_50            ; 9.452  ; 9.452  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[3] ; CLOCK_50            ; 9.494  ; 9.494  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[4] ; CLOCK_50            ; 9.411  ; 9.411  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[5] ; CLOCK_50            ; 9.137  ; 9.137  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[6] ; CLOCK_50            ; 9.478  ; 9.478  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[7] ; CLOCK_50            ; 9.159  ; 9.159  ; Rise       ; CLOCK_50            ;
+; LCD_EN       ; CLOCK_50            ; 9.101  ; 9.101  ; Rise       ; CLOCK_50            ;
+; LCD_RS       ; CLOCK_50            ; 8.712  ; 8.712  ; Rise       ; CLOCK_50            ;
+; HEX0[*]      ; MDF:comb_79|CLK_OUT ; 11.765 ; 11.765 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[0]     ; MDF:comb_79|CLK_OUT ; 11.765 ; 11.765 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[1]     ; MDF:comb_79|CLK_OUT ; 11.733 ; 11.733 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[2]     ; MDF:comb_79|CLK_OUT ; 11.760 ; 11.760 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[3]     ; MDF:comb_79|CLK_OUT ; 11.532 ; 11.532 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[4]     ; MDF:comb_79|CLK_OUT ; 11.546 ; 11.546 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[5]     ; MDF:comb_79|CLK_OUT ; 11.523 ; 11.523 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[6]     ; MDF:comb_79|CLK_OUT ; 11.519 ; 11.519 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; HEX1[*]      ; MDF:comb_79|CLK_OUT ; 8.905  ; 8.905  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[0]     ; MDF:comb_79|CLK_OUT ; 8.552  ; 8.552  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[3]     ; MDF:comb_79|CLK_OUT ; 8.407  ; 8.407  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[4]     ; MDF:comb_79|CLK_OUT ; 8.427  ; 8.427  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[5]     ; MDF:comb_79|CLK_OUT ; 8.343  ; 8.343  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[6]     ; MDF:comb_79|CLK_OUT ; 8.905  ; 8.905  ; Rise       ; MDF:comb_79|CLK_OUT ;
+; LEDR[*]      ; MDF:comb_79|CLK_OUT ; 8.667  ; 8.667  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[0]     ; MDF:comb_79|CLK_OUT ; 8.400  ; 8.400  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[1]     ; MDF:comb_79|CLK_OUT ; 7.439  ; 7.439  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[4]     ; MDF:comb_79|CLK_OUT ; 8.667  ; 8.667  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[5]     ; MDF:comb_79|CLK_OUT ; 8.177  ; 8.177  ; Rise       ; MDF:comb_79|CLK_OUT ;
++--------------+---------------------+--------+--------+------------+---------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                         ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; Data Port    ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; LCD_DATA[*]  ; CLOCK_50            ; 8.931 ; 8.931 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[0] ; CLOCK_50            ; 8.931 ; 8.931 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[1] ; CLOCK_50            ; 9.193 ; 9.193 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[2] ; CLOCK_50            ; 9.452 ; 9.452 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[3] ; CLOCK_50            ; 9.494 ; 9.494 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[4] ; CLOCK_50            ; 9.411 ; 9.411 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[5] ; CLOCK_50            ; 9.137 ; 9.137 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[6] ; CLOCK_50            ; 9.478 ; 9.478 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[7] ; CLOCK_50            ; 9.159 ; 9.159 ; Rise       ; CLOCK_50            ;
+; LCD_EN       ; CLOCK_50            ; 9.101 ; 9.101 ; Rise       ; CLOCK_50            ;
+; LCD_RS       ; CLOCK_50            ; 8.712 ; 8.712 ; Rise       ; CLOCK_50            ;
+; HEX0[*]      ; MDF:comb_79|CLK_OUT ; 9.131 ; 9.131 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[0]     ; MDF:comb_79|CLK_OUT ; 9.401 ; 9.401 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[1]     ; MDF:comb_79|CLK_OUT ; 9.372 ; 9.372 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[2]     ; MDF:comb_79|CLK_OUT ; 9.379 ; 9.379 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[3]     ; MDF:comb_79|CLK_OUT ; 9.153 ; 9.153 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[4]     ; MDF:comb_79|CLK_OUT ; 9.135 ; 9.135 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[5]     ; MDF:comb_79|CLK_OUT ; 9.136 ; 9.136 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[6]     ; MDF:comb_79|CLK_OUT ; 9.131 ; 9.131 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; HEX1[*]      ; MDF:comb_79|CLK_OUT ; 7.416 ; 7.416 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[0]     ; MDF:comb_79|CLK_OUT ; 7.625 ; 7.625 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[3]     ; MDF:comb_79|CLK_OUT ; 7.836 ; 7.836 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[4]     ; MDF:comb_79|CLK_OUT ; 7.856 ; 7.856 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[5]     ; MDF:comb_79|CLK_OUT ; 7.416 ; 7.416 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[6]     ; MDF:comb_79|CLK_OUT ; 7.601 ; 7.601 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; LEDR[*]      ; MDF:comb_79|CLK_OUT ; 7.439 ; 7.439 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[0]     ; MDF:comb_79|CLK_OUT ; 8.343 ; 8.343 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[1]     ; MDF:comb_79|CLK_OUT ; 7.439 ; 7.439 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[4]     ; MDF:comb_79|CLK_OUT ; 8.396 ; 8.396 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[5]     ; MDF:comb_79|CLK_OUT ; 8.036 ; 8.036 ; Rise       ; MDF:comb_79|CLK_OUT ;
++--------------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------+
+; Propagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; KEY[0]     ; HEX0[0]     ; 16.351 ; 16.351 ; 16.351 ; 16.351 ;
+; KEY[0]     ; HEX0[1]     ; 16.319 ; 16.319 ; 16.319 ; 16.319 ;
+; KEY[0]     ; HEX0[2]     ; 16.346 ; 16.346 ; 16.346 ; 16.346 ;
+; KEY[0]     ; HEX0[3]     ; 16.118 ; 16.118 ; 16.118 ; 16.118 ;
+; KEY[0]     ; HEX0[4]     ; 16.132 ; 16.132 ; 16.132 ; 16.132 ;
+; KEY[0]     ; HEX0[5]     ; 16.109 ; 16.109 ; 16.109 ; 16.109 ;
+; KEY[0]     ; HEX0[6]     ; 16.105 ; 16.105 ; 16.105 ; 16.105 ;
+; KEY[0]     ; HEX1[0]     ; 13.187 ; 13.033 ; 13.033 ; 13.187 ;
+; KEY[0]     ; HEX1[3]     ; 13.254 ; 12.609 ; 12.609 ; 13.254 ;
+; KEY[0]     ; HEX1[4]     ; 13.274 ; 12.629 ; 12.629 ; 13.274 ;
+; KEY[0]     ; HEX1[5]     ; 12.978 ; 12.824 ; 12.824 ; 12.978 ;
+; KEY[0]     ; HEX1[6]     ; 13.107 ; 13.752 ; 13.752 ; 13.107 ;
+; KEY[0]     ; LEDR[0]     ; 12.890 ;        ;        ; 12.890 ;
+; KEY[0]     ; LEDR[4]     ;        ; 13.157 ; 13.157 ;        ;
+; KEY[0]     ; LEDR[5]     ;        ; 12.667 ; 12.667 ;        ;
+; KEY[1]     ; HEX0[0]     ; 15.972 ; 15.972 ; 15.972 ; 15.972 ;
+; KEY[1]     ; HEX0[1]     ; 15.940 ; 15.940 ; 15.940 ; 15.940 ;
+; KEY[1]     ; HEX0[2]     ; 15.967 ; 15.967 ; 15.967 ; 15.967 ;
+; KEY[1]     ; HEX0[3]     ; 15.739 ; 15.739 ; 15.739 ; 15.739 ;
+; KEY[1]     ; HEX0[4]     ; 15.753 ; 15.753 ; 15.753 ; 15.753 ;
+; KEY[1]     ; HEX0[5]     ; 15.730 ; 15.730 ; 15.730 ; 15.730 ;
+; KEY[1]     ; HEX0[6]     ; 15.726 ; 15.726 ; 15.726 ; 15.726 ;
+; KEY[1]     ; HEX1[0]     ; 12.654 ; 12.808 ; 12.808 ; 12.654 ;
+; KEY[1]     ; HEX1[3]     ; 12.230 ; 12.875 ; 12.875 ; 12.230 ;
+; KEY[1]     ; HEX1[4]     ; 12.250 ; 12.895 ; 12.895 ; 12.250 ;
+; KEY[1]     ; HEX1[5]     ; 12.445 ; 12.599 ; 12.599 ; 12.445 ;
+; KEY[1]     ; HEX1[6]     ; 13.373 ; 12.728 ; 12.728 ; 13.373 ;
+; KEY[1]     ; LEDR[0]     ;        ; 12.511 ; 12.511 ;        ;
+; KEY[1]     ; LEDR[4]     ; 12.778 ;        ;        ; 12.778 ;
+; KEY[1]     ; LEDR[5]     ; 12.288 ;        ;        ; 12.288 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++--------------------------------------------------------------+
+; Minimum Propagation Delay                                    ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; KEY[0]     ; HEX0[0]     ; 14.317 ; 14.317 ; 14.317 ; 14.317 ;
+; KEY[0]     ; HEX0[1]     ; 14.285 ; 14.833 ; 14.833 ; 14.285 ;
+; KEY[0]     ; HEX0[2]     ; 14.749 ; 14.292 ; 14.292 ; 14.749 ;
+; KEY[0]     ; HEX0[3]     ; 14.065 ; 14.065 ; 14.065 ; 14.065 ;
+; KEY[0]     ; HEX0[4]     ; 14.083 ; 14.581 ; 14.581 ; 14.083 ;
+; KEY[0]     ; HEX0[5]     ; 14.520 ; 14.064 ; 14.064 ; 14.520 ;
+; KEY[0]     ; HEX0[6]     ; 14.060 ; 14.060 ; 14.060 ; 14.060 ;
+; KEY[0]     ; HEX1[0]     ; 12.494 ; 12.572 ; 12.572 ; 12.494 ;
+; KEY[0]     ; HEX1[3]     ; 12.561 ; 12.148 ; 12.148 ; 12.561 ;
+; KEY[0]     ; HEX1[4]     ; 12.581 ; 12.168 ; 12.168 ; 12.581 ;
+; KEY[0]     ; HEX1[5]     ; 12.285 ; 12.363 ; 12.363 ; 12.285 ;
+; KEY[0]     ; HEX1[6]     ; 12.326 ; 12.064 ; 12.064 ; 12.326 ;
+; KEY[0]     ; LEDR[0]     ; 12.429 ;        ;        ; 12.429 ;
+; KEY[0]     ; LEDR[4]     ;        ; 12.696 ; 12.696 ;        ;
+; KEY[0]     ; LEDR[5]     ;        ; 12.206 ; 12.206 ;        ;
+; KEY[1]     ; HEX0[0]     ; 14.631 ; 14.631 ; 14.631 ; 14.631 ;
+; KEY[1]     ; HEX0[1]     ; 15.147 ; 14.599 ; 14.599 ; 15.147 ;
+; KEY[1]     ; HEX0[2]     ; 14.606 ; 14.831 ; 14.831 ; 14.606 ;
+; KEY[1]     ; HEX0[3]     ; 14.379 ; 14.379 ; 14.379 ; 14.379 ;
+; KEY[1]     ; HEX0[4]     ; 14.663 ; 14.397 ; 14.397 ; 14.663 ;
+; KEY[1]     ; HEX0[5]     ; 14.378 ; 14.602 ; 14.602 ; 14.378 ;
+; KEY[1]     ; HEX0[6]     ; 14.374 ; 14.374 ; 14.374 ; 14.374 ;
+; KEY[1]     ; HEX1[0]     ; 12.654 ; 12.808 ; 12.808 ; 12.654 ;
+; KEY[1]     ; HEX1[3]     ; 12.230 ; 12.875 ; 12.875 ; 12.230 ;
+; KEY[1]     ; HEX1[4]     ; 12.250 ; 12.895 ; 12.895 ; 12.250 ;
+; KEY[1]     ; HEX1[5]     ; 12.445 ; 12.599 ; 12.599 ; 12.445 ;
+; KEY[1]     ; HEX1[6]     ; 12.146 ; 12.640 ; 12.640 ; 12.146 ;
+; KEY[1]     ; LEDR[0]     ;        ; 12.511 ; 12.511 ;        ;
+; KEY[1]     ; LEDR[4]     ; 12.778 ;        ;        ; 12.778 ;
+; KEY[1]     ; LEDR[5]     ; 12.288 ;        ;        ; 12.288 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------+
+; Fast Model Setup Summary                     ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK_50            ; -0.829 ; -25.171       ;
+; MDF:comb_79|CLK_OUT ; 0.008  ; 0.000         ;
++---------------------+--------+---------------+
+
+
++----------------------------------------------+
+; Fast Model Hold Summary                      ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK_50            ; -1.569 ; -1.569        ;
+; MDF:comb_79|CLK_OUT ; 0.215  ; 0.000         ;
++---------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------------+
+; Fast Model Minimum Pulse Width Summary       ;
++---------------------+--------+---------------+
+; Clock               ; Slack  ; End Point TNS ;
++---------------------+--------+---------------+
+; CLOCK_50            ; -1.380 ; -79.380       ;
+; MDF:comb_79|CLK_OUT ; -0.500 ; -8.000        ;
++---------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                                                               ;
++--------+---------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                 ; To Node                  ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+; -0.829 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.865      ;
+; -0.777 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.813      ;
+; -0.768 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.806      ;
+; -0.759 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.795      ;
+; -0.724 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.760      ;
+; -0.718 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 1.750      ;
+; -0.716 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.754      ;
+; -0.698 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.734      ;
+; -0.698 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.736      ;
+; -0.698 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.736      ;
+; -0.689 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.725      ;
+; -0.668 ; MDF:comb_79|CONT[4]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.704      ;
+; -0.665 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.701      ;
+; -0.663 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.701      ;
+; -0.657 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.002      ; 1.691      ;
+; -0.650 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.688      ;
+; -0.646 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.682      ;
+; -0.646 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.684      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[0]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[1]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[2]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[3]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[4]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[5]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[6]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[7]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.645 ; LCD_TEST:u5|mDLY[14]      ; LCD_TEST:u5|mDLY[8]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.683      ;
+; -0.640 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[25]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.678      ;
+; -0.637 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.673      ;
+; -0.633 ; LCD_TEST:u5|LUT_INDEX[4]  ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 1.654      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[0]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[1]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[2]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[3]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[4]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[5]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[6]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[7]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.632 ; LCD_TEST:u5|mDLY[16]      ; LCD_TEST:u5|mDLY[8]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.670      ;
+; -0.628 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.664      ;
+; -0.628 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.666      ;
+; -0.619 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.655      ;
+; -0.613 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.649      ;
+; -0.607 ; MDF:comb_79|CONT[4]       ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.645      ;
+; -0.598 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.636      ;
+; -0.595 ; LCD_TEST:u5|LUT_INDEX[0]  ; LCD_TEST:u5|mLCD_DATA[2] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.009     ; 1.618      ;
+; -0.595 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.631      ;
+; -0.593 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.629      ;
+; -0.593 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.631      ;
+; -0.592 ; MDF:comb_79|CONT[5]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.628      ;
+; -0.588 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[25]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.626      ;
+; -0.587 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 1.619      ;
+; -0.587 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.002      ; 1.621      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[0]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[1]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[2]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[3]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[4]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[5]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[6]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[7]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.586 ; LCD_TEST:u5|mDLY[13]      ; LCD_TEST:u5|mDLY[8]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.624      ;
+; -0.584 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.620      ;
+; -0.580 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.618      ;
+; -0.578 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 1.610      ;
+; -0.576 ; LCD_TEST:u5|LUT_INDEX[0]  ; LCD_TEST:u5|mLCD_DATA[0] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.010     ; 1.598      ;
+; -0.570 ; MDF:comb_79|CONT[0]       ; MDF:comb_79|CONT[23]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.608      ;
+; -0.570 ; MDF:comb_79|CONT[2]       ; MDF:comb_79|CONT[25]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.608      ;
+; -0.569 ; LCD_TEST:u5|LUT_INDEX[2]  ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 1.590      ;
+; -0.562 ; LCD_TEST:u5|LUT_INDEX[3]  ; LCD_TEST:u5|mLCD_DATA[0] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.010     ; 1.584      ;
+; -0.561 ; LCD_TEST:u5|LUT_INDEX[1]  ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 1.582      ;
+; -0.560 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.596      ;
+; -0.557 ; LCD_TEST:u5|LUT_INDEX[3]  ; LCD_TEST:u5|mLCD_DATA[6] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 1.590      ;
+; -0.554 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[18]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 1.586      ;
+; -0.550 ; LCD_TEST:u5|LUT_INDEX[3]  ; LCD_TEST:u5|mLCD_DATA[5] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 1.583      ;
+; -0.545 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.583      ;
+; -0.539 ; SEMAFORO:comb_80|state.00 ; LCD_TEST:u5|mLCD_DATA[6] ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 1.000        ; 0.118      ; 1.689      ;
+; -0.539 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[20]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.002      ; 1.573      ;
+; -0.537 ; MDF:comb_79|CONT[4]       ; MDF:comb_79|CONT[19]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.573      ;
+; -0.537 ; MDF:comb_79|CONT[4]       ; MDF:comb_79|CONT[22]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.575      ;
+; -0.536 ; MDF:comb_79|CONT[20]      ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.006     ; 1.562      ;
+; -0.536 ; MDF:comb_79|CONT[20]      ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.006     ; 1.562      ;
+; -0.535 ; MDF:comb_79|CONT[3]       ; MDF:comb_79|CONT[25]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.573      ;
+; -0.533 ; LCD_TEST:u5|LUT_INDEX[2]  ; LCD_TEST:u5|mLCD_DATA[6] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 1.566      ;
+; -0.531 ; MDF:comb_79|CONT[5]       ; MDF:comb_79|CONT[24]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.569      ;
+; -0.531 ; LCD_TEST:u5|LUT_INDEX[0]  ; LCD_TEST:u5|mLCD_DATA[1] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.011     ; 1.552      ;
+; -0.529 ; MDF:comb_79|CONT[6]       ; MDF:comb_79|CONT[25]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.002      ; 1.563      ;
+; -0.528 ; MDF:comb_79|CONT[4]       ; MDF:comb_79|CONT[16]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.564      ;
+; -0.523 ; MDF:comb_79|CONT[7]       ; MDF:comb_79|CONT[21]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.004      ; 1.559      ;
+; -0.522 ; LCD_TEST:u5|LUT_INDEX[4]  ; LCD_TEST:u5|mLCD_DATA[3] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.008     ; 1.546      ;
+; -0.519 ; LCD_TEST:u5|LUT_INDEX[1]  ; LCD_TEST:u5|mLCD_DATA[2] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; -0.009     ; 1.542      ;
+; -0.519 ; MDF:comb_79|CONT[7]       ; MDF:comb_79|CONT[11]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 1.551      ;
+; -0.519 ; MDF:comb_79|CONT[7]       ; MDF:comb_79|CONT[12]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.000      ; 1.551      ;
+; -0.518 ; MDF:comb_79|CONT[1]       ; MDF:comb_79|CONT[23]     ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.556      ;
+; -0.512 ; LCD_TEST:u5|LUT_INDEX[0]  ; LCD_TEST:u5|mLCD_DATA[6] ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.001      ; 1.545      ;
+; -0.509 ; LCD_TEST:u5|mDLY[15]      ; LCD_TEST:u5|mDLY[0]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.547      ;
+; -0.509 ; LCD_TEST:u5|mDLY[15]      ; LCD_TEST:u5|mDLY[1]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.547      ;
+; -0.509 ; LCD_TEST:u5|mDLY[15]      ; LCD_TEST:u5|mDLY[2]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.547      ;
+; -0.509 ; LCD_TEST:u5|mDLY[15]      ; LCD_TEST:u5|mDLY[3]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.547      ;
+; -0.509 ; LCD_TEST:u5|mDLY[15]      ; LCD_TEST:u5|mDLY[4]      ; CLOCK_50            ; CLOCK_50    ; 1.000        ; 0.006      ; 1.547      ;
++--------+---------------------------+--------------------------+---------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'MDF:comb_79|CLK_OUT'                                                                                                                                ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; 0.008 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 1.024      ;
+; 0.060 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.972      ;
+; 0.068 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.964      ;
+; 0.072 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.960      ;
+; 0.083 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.949      ;
+; 0.098 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.934      ;
+; 0.103 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.929      ;
+; 0.105 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.927      ;
+; 0.107 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.925      ;
+; 0.109 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.923      ;
+; 0.129 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.903      ;
+; 0.148 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.884      ;
+; 0.152 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.880      ;
+; 0.154 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.878      ;
+; 0.178 ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.854      ;
+; 0.181 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.851      ;
+; 0.191 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.841      ;
+; 0.193 ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.839      ;
+; 0.200 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.832      ;
+; 0.220 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.812      ;
+; 0.242 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.790      ;
+; 0.247 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.785      ;
+; 0.290 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.742      ;
+; 0.312 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.720      ;
+; 0.339 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.693      ;
+; 0.356 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.676      ;
+; 0.394 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.638      ;
+; 0.416 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.616      ;
+; 0.502 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.530      ;
+; 0.538 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.494      ;
+; 0.665 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[0]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 1.000        ; 0.000      ; 0.367      ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                                                                                           ;
++--------+----------------------------------------+----------------------------------------+---------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                              ; To Node                                ; Launch Clock        ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------+----------------------------------------+---------------------+-------------+--------------+------------+------------+
+; -1.569 ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; 0.000        ; 1.643      ; 0.367      ;
+; -1.069 ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT                    ; MDF:comb_79|CLK_OUT ; CLOCK_50    ; -0.500       ; 1.643      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_ST.000010             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215  ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.248  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.400      ;
+; 0.254  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_Start                 ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.406      ;
+; 0.266  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.418      ;
+; 0.267  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.419      ;
+; 0.273  ; LCD_TEST:u5|mLCD_ST.000011             ; LCD_TEST:u5|mLCD_ST.000000             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.425      ;
+; 0.296  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|oDone    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.448      ;
+; 0.310  ; LCD_TEST:u5|mLCD_ST.000001             ; LCD_TEST:u5|mLCD_Start                 ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.462      ;
+; 0.335  ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 0.486      ;
+; 0.349  ; LCD_TEST:u5|mLCD_Start                 ; LCD_TEST:u5|LCD_Controller:u0|preStart ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.501      ;
+; 0.354  ; LCD_TEST:u5|mDLY[0]                    ; LCD_TEST:u5|mDLY[0]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.506      ;
+; 0.357  ; LCD_TEST:u5|mDLY[9]                    ; LCD_TEST:u5|mDLY[9]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.509      ;
+; 0.357  ; LCD_TEST:u5|mDLY[10]                   ; LCD_TEST:u5|mDLY[10]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.509      ;
+; 0.358  ; MDF:comb_79|CONT[8]                    ; MDF:comb_79|CONT[8]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.510      ;
+; 0.358  ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 0.509      ;
+; 0.360  ; MDF:comb_79|CONT[10]                   ; MDF:comb_79|CONT[10]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.360  ; MDF:comb_79|CONT[15]                   ; MDF:comb_79|CONT[15]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.512      ;
+; 0.361  ; MDF:comb_79|CONT[1]                    ; MDF:comb_79|CONT[1]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; MDF:comb_79|CONT[4]                    ; MDF:comb_79|CONT[4]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.361  ; MDF:comb_79|CONT[17]                   ; MDF:comb_79|CONT[17]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362  ; LCD_TEST:u5|mDLY[2]                    ; LCD_TEST:u5|mDLY[2]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.362  ; LCD_TEST:u5|mDLY[4]                    ; LCD_TEST:u5|mDLY[4]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.514      ;
+; 0.365  ; LCD_TEST:u5|mDLY[6]                    ; LCD_TEST:u5|mDLY[6]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365  ; LCD_TEST:u5|mDLY[7]                    ; LCD_TEST:u5|mDLY[7]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365  ; LCD_TEST:u5|mDLY[8]                    ; LCD_TEST:u5|mDLY[8]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.517      ;
+; 0.367  ; LCD_TEST:u5|mDLY[11]                   ; LCD_TEST:u5|mDLY[11]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.519      ;
+; 0.367  ; LCD_TEST:u5|mDLY[16]                   ; LCD_TEST:u5|mDLY[16]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.519      ;
+; 0.368  ; LCD_TEST:u5|mDLY[13]                   ; LCD_TEST:u5|mDLY[13]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.520      ;
+; 0.369  ; MDF:comb_79|CONT[23]                   ; MDF:comb_79|CONT[23]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369  ; MDF:comb_79|CONT[25]                   ; MDF:comb_79|CONT[25]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.369  ; LCD_TEST:u5|LCD_Controller:u0|preStart ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.521      ;
+; 0.371  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_ST.000001             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.523      ;
+; 0.373  ; MDF:comb_79|CONT[5]                    ; MDF:comb_79|CONT[5]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373  ; LCD_TEST:u5|mDLY[17]                   ; LCD_TEST:u5|mDLY[17]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.373  ; LCD_TEST:u5|LCD_Controller:u0|oDone    ; LCD_TEST:u5|mLCD_ST.000010             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.525      ;
+; 0.374  ; MDF:comb_79|CONT[7]                    ; MDF:comb_79|CONT[7]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; MDF:comb_79|CONT[9]                    ; MDF:comb_79|CONT[9]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374  ; LCD_TEST:u5|mLCD_ST.000011             ; LCD_TEST:u5|mLCD_Start                 ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.526      ;
+; 0.376  ; MDF:comb_79|CONT[0]                    ; MDF:comb_79|CONT[0]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; MDF:comb_79|CONT[2]                    ; MDF:comb_79|CONT[2]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; MDF:comb_79|CONT[3]                    ; MDF:comb_79|CONT[3]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; LCD_TEST:u5|mLCD_ST.000010             ; LCD_TEST:u5|mLCD_ST.000011             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.376  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; LCD_TEST:u5|LCD_Controller:u0|oDone    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.528      ;
+; 0.377  ; LCD_TEST:u5|mDLY[1]                    ; LCD_TEST:u5|mDLY[1]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.529      ;
+; 0.377  ; LCD_TEST:u5|mDLY[12]                   ; LCD_TEST:u5|mDLY[12]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.529      ;
+; 0.378  ; LCD_TEST:u5|mDLY[3]                    ; LCD_TEST:u5|mDLY[3]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378  ; LCD_TEST:u5|mDLY[14]                   ; LCD_TEST:u5|mDLY[14]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378  ; LCD_TEST:u5|mDLY[15]                   ; LCD_TEST:u5|mDLY[15]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379  ; LCD_TEST:u5|mDLY[5]                    ; LCD_TEST:u5|mDLY[5]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.531      ;
+; 0.380  ; LCD_TEST:u5|LUT_INDEX[4]               ; LCD_TEST:u5|LUT_INDEX[4]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.532      ;
+; 0.383  ; LCD_TEST:u5|LUT_INDEX[5]               ; LCD_TEST:u5|LUT_INDEX[5]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.535      ;
+; 0.384  ; LCD_TEST:u5|LUT_INDEX[1]               ; LCD_TEST:u5|LUT_INDEX[1]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.536      ;
+; 0.384  ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.536      ;
+; 0.389  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.541      ;
+; 0.392  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.544      ;
+; 0.394  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 0.547      ;
+; 0.395  ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.547      ;
+; 0.402  ; LCD_TEST:u5|LUT_INDEX[2]               ; LCD_TEST:u5|LUT_INDEX[2]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.554      ;
+; 0.402  ; LCD_TEST:u5|LUT_INDEX[3]               ; LCD_TEST:u5|LUT_INDEX[3]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.554      ;
+; 0.403  ; LCD_TEST:u5|mLCD_Start                 ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.555      ;
+; 0.404  ; LCD_TEST:u5|mLCD_ST.000001             ; LCD_TEST:u5|mLCD_ST.000010             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.556      ;
+; 0.405  ; LCD_TEST:u5|LUT_INDEX[0]               ; LCD_TEST:u5|LUT_INDEX[0]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.557      ;
+; 0.452  ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 0.605      ;
+; 0.453  ; LCD_TEST:u5|LUT_INDEX[3]               ; LCD_TEST:u5|mLCD_DATA[5]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 0.606      ;
+; 0.458  ; LCD_TEST:u5|LUT_INDEX[5]               ; LCD_TEST:u5|mLCD_DATA[6]               ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.001      ; 0.611      ;
+; 0.492  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.644      ;
+; 0.495  ; LCD_TEST:u5|mDLY[9]                    ; LCD_TEST:u5|mDLY[10]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.647      ;
+; 0.495  ; LCD_TEST:u5|mDLY[10]                   ; LCD_TEST:u5|mDLY[11]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.647      ;
+; 0.496  ; LCD_TEST:u5|mLCD_ST.000011             ; LCD_TEST:u5|mLCD_ST.000001             ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496  ; MDF:comb_79|CONT[8]                    ; MDF:comb_79|CONT[9]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.648      ;
+; 0.496  ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ; CLOCK_50            ; CLOCK_50    ; 0.000        ; -0.001     ; 0.647      ;
+; 0.499  ; MDF:comb_79|CONT[22]                   ; MDF:comb_79|CONT[23]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; MDF:comb_79|CONT[24]                   ; MDF:comb_79|CONT[25]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.499  ; MDF:comb_79|CONT[1]                    ; MDF:comb_79|CONT[2]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.651      ;
+; 0.500  ; LCD_TEST:u5|mDLY[2]                    ; LCD_TEST:u5|mDLY[3]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.652      ;
+; 0.500  ; LCD_TEST:u5|mDLY[4]                    ; LCD_TEST:u5|mDLY[5]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.652      ;
+; 0.503  ; LCD_TEST:u5|mDLY[6]                    ; LCD_TEST:u5|mDLY[7]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.655      ;
+; 0.503  ; LCD_TEST:u5|mDLY[7]                    ; LCD_TEST:u5|mDLY[8]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.655      ;
+; 0.505  ; LCD_TEST:u5|mDLY[11]                   ; LCD_TEST:u5|mDLY[12]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.657      ;
+; 0.506  ; LCD_TEST:u5|mDLY[13]                   ; LCD_TEST:u5|mDLY[14]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.658      ;
+; 0.514  ; MDF:comb_79|CONT[7]                    ; MDF:comb_79|CONT[8]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514  ; MDF:comb_79|CONT[9]                    ; MDF:comb_79|CONT[10]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.666      ;
+; 0.515  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.667      ;
+; 0.515  ; LCD_TEST:u5|LCD_Controller:u0|mStart   ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.667      ;
+; 0.516  ; MDF:comb_79|CONT[0]                    ; MDF:comb_79|CONT[1]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516  ; MDF:comb_79|CONT[3]                    ; MDF:comb_79|CONT[4]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.516  ; MDF:comb_79|CONT[2]                    ; MDF:comb_79|CONT[3]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.668      ;
+; 0.517  ; LCD_TEST:u5|mDLY[1]                    ; LCD_TEST:u5|mDLY[2]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.669      ;
+; 0.517  ; LCD_TEST:u5|mDLY[12]                   ; LCD_TEST:u5|mDLY[13]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.669      ;
+; 0.518  ; LCD_TEST:u5|mDLY[3]                    ; LCD_TEST:u5|mDLY[4]                    ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.670      ;
+; 0.518  ; LCD_TEST:u5|mDLY[15]                   ; LCD_TEST:u5|mDLY[16]                   ; CLOCK_50            ; CLOCK_50    ; 0.000        ; 0.000      ; 0.670      ;
++--------+----------------------------------------+----------------------------------------+---------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'MDF:comb_79|CLK_OUT'                                                                                                                                 ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock        ; Latch Clock         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+; 0.215 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[0]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.367      ;
+; 0.342 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[1]             ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.494      ;
+; 0.378 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.530      ;
+; 0.464 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.616      ;
+; 0.486 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[2]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.638      ;
+; 0.524 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.676      ;
+; 0.541 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.693      ;
+; 0.568 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.720      ;
+; 0.590 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.742      ;
+; 0.597 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.749      ;
+; 0.620 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.772      ;
+; 0.633 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.785      ;
+; 0.638 ; SEMAFORO:comb_80|state.01~_emulated ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.790      ;
+; 0.659 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.811      ;
+; 0.672 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.824      ;
+; 0.680 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|cnt[3]~_emulated   ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.832      ;
+; 0.680 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.832      ;
+; 0.686 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.838      ;
+; 0.687 ; SEMAFORO:comb_80|state.00           ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.839      ;
+; 0.697 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.849      ;
+; 0.702 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; SEMAFORO:comb_80|state.10           ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.854      ;
+; 0.707 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.859      ;
+; 0.707 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.859      ;
+; 0.725 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.11~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.877      ;
+; 0.732 ; SEMAFORO:comb_80|state.11~_emulated ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.884      ;
+; 0.737 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.01~_emulated ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.889      ;
+; 0.740 ; SEMAFORO:comb_80|cnt[3]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.892      ;
+; 0.754 ; SEMAFORO:comb_80|cnt[0]             ; SEMAFORO:comb_80|state.10           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.906      ;
+; 0.755 ; SEMAFORO:comb_80|cnt[1]             ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.907      ;
+; 0.759 ; SEMAFORO:comb_80|cnt[2]~_emulated   ; SEMAFORO:comb_80|state.00           ; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 0.000        ; 0.000      ; 0.911      ;
++-------+-------------------------------------+-------------------------------------+---------------------+---------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|Cont[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|LCD_EN   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.00    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.01    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.10    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|ST.11    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|mStart   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|mStart   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|oDone    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|oDone    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|preStart ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LCD_Controller:u0|preStart ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|LUT_INDEX[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[0]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[0]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[10]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[10]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[11]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[11]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[12]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[12]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[13]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[13]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[14]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[14]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[15]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[15]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[16]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[16]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[17]                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[17]                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[1]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[1]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[2]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[2]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[3]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[3]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[4]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[4]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[5]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[5]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[6]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[6]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[7]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[7]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[8]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[8]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[9]                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mDLY[9]                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[7]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_DATA[7]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_RS                    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_RS                    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000000             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000000             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000001             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000001             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000010             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000010             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; LCD_TEST:u5|mLCD_ST.000011             ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'MDF:comb_79|CLK_OUT'                                                                              ;
++--------+--------------+----------------+------------------+---------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock               ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+---------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[0]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[1]             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[2]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[2]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[3]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|cnt[3]~_emulated   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.00           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.00           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.01~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.01~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.10           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.10           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.11~_emulated ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; SEMAFORO:comb_80|state.11~_emulated ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT|regout              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|inclk[0]    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_79|CLK_OUT~clkctrl|outclk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[0]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[1]|clk                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[2]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[2]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[3]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|cnt[3]~_emulated|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.00|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.00|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.01~_emulated|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.01~_emulated|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.10|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.10|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.11~_emulated|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; MDF:comb_79|CLK_OUT ; Rise       ; comb_80|state.11~_emulated|clk      ;
++--------+--------------+----------------+------------------+---------------------+------------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; KEY[*]    ; CLOCK_50            ; 3.935 ; 3.935 ; Rise       ; CLOCK_50            ;
+;  KEY[0]   ; CLOCK_50            ; 3.935 ; 3.935 ; Rise       ; CLOCK_50            ;
+;  KEY[1]   ; CLOCK_50            ; 3.713 ; 3.713 ; Rise       ; CLOCK_50            ;
+; KEY[*]    ; MDF:comb_79|CLK_OUT ; 3.589 ; 3.589 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[0]   ; MDF:comb_79|CLK_OUT ; 3.589 ; 3.589 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[1]   ; MDF:comb_79|CLK_OUT ; 3.367 ; 3.367 ; Rise       ; MDF:comb_79|CLK_OUT ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Hold Times                                                                           ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; KEY[*]    ; CLOCK_50            ; -3.332 ; -3.332 ; Rise       ; CLOCK_50            ;
+;  KEY[0]   ; CLOCK_50            ; -3.355 ; -3.355 ; Rise       ; CLOCK_50            ;
+;  KEY[1]   ; CLOCK_50            ; -3.332 ; -3.332 ; Rise       ; CLOCK_50            ;
+; KEY[*]    ; MDF:comb_79|CLK_OUT ; -2.839 ; -2.839 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[0]   ; MDF:comb_79|CLK_OUT ; -2.863 ; -2.863 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[1]   ; MDF:comb_79|CLK_OUT ; -2.839 ; -2.839 ; Rise       ; MDF:comb_79|CLK_OUT ;
++-----------+---------------------+--------+--------+------------+---------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                 ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; Data Port    ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; LCD_DATA[*]  ; CLOCK_50            ; 5.148 ; 5.148 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[0] ; CLOCK_50            ; 4.943 ; 4.943 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[1] ; CLOCK_50            ; 5.050 ; 5.050 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[2] ; CLOCK_50            ; 5.119 ; 5.119 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[3] ; CLOCK_50            ; 5.148 ; 5.148 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[4] ; CLOCK_50            ; 5.081 ; 5.081 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[5] ; CLOCK_50            ; 5.013 ; 5.013 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[6] ; CLOCK_50            ; 5.147 ; 5.147 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[7] ; CLOCK_50            ; 5.030 ; 5.030 ; Rise       ; CLOCK_50            ;
+; LCD_EN       ; CLOCK_50            ; 4.935 ; 4.935 ; Rise       ; CLOCK_50            ;
+; LCD_RS       ; CLOCK_50            ; 4.776 ; 4.776 ; Rise       ; CLOCK_50            ;
+; HEX0[*]      ; MDF:comb_79|CLK_OUT ; 6.087 ; 6.087 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[0]     ; MDF:comb_79|CLK_OUT ; 6.087 ; 6.087 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[1]     ; MDF:comb_79|CLK_OUT ; 6.060 ; 6.060 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[2]     ; MDF:comb_79|CLK_OUT ; 6.074 ; 6.074 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[3]     ; MDF:comb_79|CLK_OUT ; 5.970 ; 5.970 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[4]     ; MDF:comb_79|CLK_OUT ; 5.975 ; 5.975 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[5]     ; MDF:comb_79|CLK_OUT ; 5.965 ; 5.965 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[6]     ; MDF:comb_79|CLK_OUT ; 5.956 ; 5.956 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; HEX1[*]      ; MDF:comb_79|CLK_OUT ; 4.623 ; 4.623 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[0]     ; MDF:comb_79|CLK_OUT ; 4.540 ; 4.540 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[3]     ; MDF:comb_79|CLK_OUT ; 4.401 ; 4.401 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[4]     ; MDF:comb_79|CLK_OUT ; 4.421 ; 4.421 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[5]     ; MDF:comb_79|CLK_OUT ; 4.380 ; 4.380 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[6]     ; MDF:comb_79|CLK_OUT ; 4.623 ; 4.623 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; LEDR[*]      ; MDF:comb_79|CLK_OUT ; 4.593 ; 4.593 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[0]     ; MDF:comb_79|CLK_OUT ; 4.499 ; 4.499 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[1]     ; MDF:comb_79|CLK_OUT ; 4.076 ; 4.076 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[4]     ; MDF:comb_79|CLK_OUT ; 4.593 ; 4.593 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[5]     ; MDF:comb_79|CLK_OUT ; 4.368 ; 4.368 ; Rise       ; MDF:comb_79|CLK_OUT ;
++--------------+---------------------+-------+-------+------------+---------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                         ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; Data Port    ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; LCD_DATA[*]  ; CLOCK_50            ; 4.943 ; 4.943 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[0] ; CLOCK_50            ; 4.943 ; 4.943 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[1] ; CLOCK_50            ; 5.050 ; 5.050 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[2] ; CLOCK_50            ; 5.119 ; 5.119 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[3] ; CLOCK_50            ; 5.148 ; 5.148 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[4] ; CLOCK_50            ; 5.081 ; 5.081 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[5] ; CLOCK_50            ; 5.013 ; 5.013 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[6] ; CLOCK_50            ; 5.147 ; 5.147 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[7] ; CLOCK_50            ; 5.030 ; 5.030 ; Rise       ; CLOCK_50            ;
+; LCD_EN       ; CLOCK_50            ; 4.935 ; 4.935 ; Rise       ; CLOCK_50            ;
+; LCD_RS       ; CLOCK_50            ; 4.776 ; 4.776 ; Rise       ; CLOCK_50            ;
+; HEX0[*]      ; MDF:comb_79|CLK_OUT ; 4.885 ; 4.885 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[0]     ; MDF:comb_79|CLK_OUT ; 5.022 ; 5.022 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[1]     ; MDF:comb_79|CLK_OUT ; 4.994 ; 4.994 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[2]     ; MDF:comb_79|CLK_OUT ; 5.005 ; 5.005 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[3]     ; MDF:comb_79|CLK_OUT ; 4.906 ; 4.906 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[4]     ; MDF:comb_79|CLK_OUT ; 4.911 ; 4.911 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[5]     ; MDF:comb_79|CLK_OUT ; 4.892 ; 4.892 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[6]     ; MDF:comb_79|CLK_OUT ; 4.885 ; 4.885 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; HEX1[*]      ; MDF:comb_79|CLK_OUT ; 3.966 ; 3.966 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[0]     ; MDF:comb_79|CLK_OUT ; 4.126 ; 4.126 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[3]     ; MDF:comb_79|CLK_OUT ; 4.157 ; 4.157 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[4]     ; MDF:comb_79|CLK_OUT ; 4.177 ; 4.177 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[5]     ; MDF:comb_79|CLK_OUT ; 3.966 ; 3.966 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[6]     ; MDF:comb_79|CLK_OUT ; 4.068 ; 4.068 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; LEDR[*]      ; MDF:comb_79|CLK_OUT ; 4.076 ; 4.076 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[0]     ; MDF:comb_79|CLK_OUT ; 4.473 ; 4.473 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[1]     ; MDF:comb_79|CLK_OUT ; 4.076 ; 4.076 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[4]     ; MDF:comb_79|CLK_OUT ; 4.494 ; 4.494 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[5]     ; MDF:comb_79|CLK_OUT ; 4.312 ; 4.312 ; Rise       ; MDF:comb_79|CLK_OUT ;
++--------------+---------------------+-------+-------+------------+---------------------+
+
+
++----------------------------------------------------------+
+; Propagation Delay                                        ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; KEY[0]     ; HEX0[0]     ; 8.513 ; 8.513 ; 8.513 ; 8.513 ;
+; KEY[0]     ; HEX0[1]     ; 8.486 ; 8.486 ; 8.486 ; 8.486 ;
+; KEY[0]     ; HEX0[2]     ; 8.500 ; 8.500 ; 8.500 ; 8.500 ;
+; KEY[0]     ; HEX0[3]     ; 8.396 ; 8.396 ; 8.396 ; 8.396 ;
+; KEY[0]     ; HEX0[4]     ; 8.401 ; 8.401 ; 8.401 ; 8.401 ;
+; KEY[0]     ; HEX0[5]     ; 8.391 ; 8.391 ; 8.391 ; 8.391 ;
+; KEY[0]     ; HEX0[6]     ; 8.382 ; 8.382 ; 8.382 ; 8.382 ;
+; KEY[0]     ; HEX1[0]     ; 7.087 ; 7.033 ; 7.033 ; 7.087 ;
+; KEY[0]     ; HEX1[3]     ; 7.050 ; 6.779 ; 6.779 ; 7.050 ;
+; KEY[0]     ; HEX1[4]     ; 7.070 ; 6.799 ; 6.799 ; 7.070 ;
+; KEY[0]     ; HEX1[5]     ; 6.927 ; 6.873 ; 6.873 ; 6.927 ;
+; KEY[0]     ; HEX1[6]     ; 7.001 ; 7.272 ; 7.272 ; 7.001 ;
+; KEY[0]     ; LEDR[0]     ; 7.000 ;       ;       ; 7.000 ;
+; KEY[0]     ; LEDR[4]     ;       ; 7.094 ; 7.094 ;       ;
+; KEY[0]     ; LEDR[5]     ;       ; 6.869 ; 6.869 ;       ;
+; KEY[1]     ; HEX0[0]     ; 8.291 ; 8.291 ; 8.291 ; 8.291 ;
+; KEY[1]     ; HEX0[1]     ; 8.264 ; 8.264 ; 8.264 ; 8.264 ;
+; KEY[1]     ; HEX0[2]     ; 8.278 ; 8.278 ; 8.278 ; 8.278 ;
+; KEY[1]     ; HEX0[3]     ; 8.174 ; 8.174 ; 8.174 ; 8.174 ;
+; KEY[1]     ; HEX0[4]     ; 8.179 ; 8.179 ; 8.179 ; 8.179 ;
+; KEY[1]     ; HEX0[5]     ; 8.169 ; 8.169 ; 8.169 ; 8.169 ;
+; KEY[1]     ; HEX0[6]     ; 8.160 ; 8.160 ; 8.160 ; 8.160 ;
+; KEY[1]     ; HEX1[0]     ; 6.811 ; 6.865 ; 6.865 ; 6.811 ;
+; KEY[1]     ; HEX1[3]     ; 6.557 ; 6.828 ; 6.828 ; 6.557 ;
+; KEY[1]     ; HEX1[4]     ; 6.577 ; 6.848 ; 6.848 ; 6.577 ;
+; KEY[1]     ; HEX1[5]     ; 6.651 ; 6.705 ; 6.705 ; 6.651 ;
+; KEY[1]     ; HEX1[6]     ; 7.050 ; 6.779 ; 6.779 ; 7.050 ;
+; KEY[1]     ; LEDR[0]     ;       ; 6.778 ; 6.778 ;       ;
+; KEY[1]     ; LEDR[4]     ; 6.872 ;       ;       ; 6.872 ;
+; KEY[1]     ; LEDR[5]     ; 6.647 ;       ;       ; 6.647 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------+
+; Minimum Propagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; KEY[0]     ; HEX0[0]     ; 7.695 ; 7.695 ; 7.695 ; 7.695 ;
+; KEY[0]     ; HEX0[1]     ; 7.664 ; 7.915 ; 7.915 ; 7.664 ;
+; KEY[0]     ; HEX0[2]     ; 7.808 ; 7.672 ; 7.672 ; 7.808 ;
+; KEY[0]     ; HEX0[3]     ; 7.575 ; 7.575 ; 7.575 ; 7.575 ;
+; KEY[0]     ; HEX0[4]     ; 7.586 ; 7.715 ; 7.715 ; 7.586 ;
+; KEY[0]     ; HEX0[5]     ; 7.705 ; 7.572 ; 7.572 ; 7.705 ;
+; KEY[0]     ; HEX0[6]     ; 7.569 ; 7.569 ; 7.569 ; 7.569 ;
+; KEY[0]     ; HEX1[0]     ; 6.830 ; 6.835 ; 6.835 ; 6.830 ;
+; KEY[0]     ; HEX1[3]     ; 6.793 ; 6.581 ; 6.581 ; 6.793 ;
+; KEY[0]     ; HEX1[4]     ; 6.813 ; 6.601 ; 6.601 ; 6.813 ;
+; KEY[0]     ; HEX1[5]     ; 6.670 ; 6.675 ; 6.675 ; 6.670 ;
+; KEY[0]     ; HEX1[6]     ; 6.705 ; 6.546 ; 6.546 ; 6.705 ;
+; KEY[0]     ; LEDR[0]     ; 6.801 ;       ;       ; 6.801 ;
+; KEY[0]     ; LEDR[4]     ;       ; 6.895 ; 6.895 ;       ;
+; KEY[0]     ; LEDR[5]     ;       ; 6.670 ; 6.670 ;       ;
+; KEY[1]     ; HEX0[0]     ; 7.730 ; 7.730 ; 7.730 ; 7.730 ;
+; KEY[1]     ; HEX0[1]     ; 7.950 ; 7.699 ; 7.699 ; 7.950 ;
+; KEY[1]     ; HEX0[2]     ; 7.707 ; 7.784 ; 7.784 ; 7.707 ;
+; KEY[1]     ; HEX0[3]     ; 7.610 ; 7.610 ; 7.610 ; 7.610 ;
+; KEY[1]     ; HEX0[4]     ; 7.691 ; 7.621 ; 7.621 ; 7.691 ;
+; KEY[1]     ; HEX0[5]     ; 7.607 ; 7.681 ; 7.681 ; 7.607 ;
+; KEY[1]     ; HEX0[6]     ; 7.604 ; 7.604 ; 7.604 ; 7.604 ;
+; KEY[1]     ; HEX1[0]     ; 6.811 ; 6.865 ; 6.865 ; 6.811 ;
+; KEY[1]     ; HEX1[3]     ; 6.557 ; 6.828 ; 6.828 ; 6.557 ;
+; KEY[1]     ; HEX1[4]     ; 6.577 ; 6.848 ; 6.848 ; 6.577 ;
+; KEY[1]     ; HEX1[5]     ; 6.651 ; 6.705 ; 6.705 ; 6.651 ;
+; KEY[1]     ; HEX1[6]     ; 6.522 ; 6.740 ; 6.740 ; 6.522 ;
+; KEY[1]     ; LEDR[0]     ;       ; 6.778 ; 6.778 ;       ;
+; KEY[1]     ; LEDR[4]     ; 6.872 ;       ;       ; 6.872 ;
+; KEY[1]     ; LEDR[5]     ; 6.647 ;       ;       ; 6.647 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++-------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                 ;
++----------------------+----------+--------+----------+---------+---------------------+
+; Clock                ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++----------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack     ; -2.847   ; -2.523 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50            ; -2.847   ; -2.523 ; N/A      ; N/A     ; -1.380              ;
+;  MDF:comb_79|CLK_OUT ; -1.136   ; 0.215  ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS      ; -135.856 ; -2.523 ; 0.0      ; 0.0     ; -87.38              ;
+;  CLOCK_50            ; -130.644 ; -2.523 ; N/A      ; N/A     ; -79.380             ;
+;  MDF:comb_79|CLK_OUT ; -5.212   ; 0.000  ; N/A      ; N/A     ; -8.000              ;
++----------------------+----------+--------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------+
+; Setup Times                                                                        ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+-------+-------+------------+---------------------+
+; KEY[*]    ; CLOCK_50            ; 7.999 ; 7.999 ; Rise       ; CLOCK_50            ;
+;  KEY[0]   ; CLOCK_50            ; 7.999 ; 7.999 ; Rise       ; CLOCK_50            ;
+;  KEY[1]   ; CLOCK_50            ; 7.620 ; 7.620 ; Rise       ; CLOCK_50            ;
+; KEY[*]    ; MDF:comb_79|CLK_OUT ; 6.916 ; 6.916 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[0]   ; MDF:comb_79|CLK_OUT ; 6.916 ; 6.916 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[1]   ; MDF:comb_79|CLK_OUT ; 6.537 ; 6.537 ; Rise       ; MDF:comb_79|CLK_OUT ;
++-----------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Hold Times                                                                           ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; Data Port ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++-----------+---------------------+--------+--------+------------+---------------------+
+; KEY[*]    ; CLOCK_50            ; -3.332 ; -3.332 ; Rise       ; CLOCK_50            ;
+;  KEY[0]   ; CLOCK_50            ; -3.355 ; -3.355 ; Rise       ; CLOCK_50            ;
+;  KEY[1]   ; CLOCK_50            ; -3.332 ; -3.332 ; Rise       ; CLOCK_50            ;
+; KEY[*]    ; MDF:comb_79|CLK_OUT ; -2.839 ; -2.839 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[0]   ; MDF:comb_79|CLK_OUT ; -2.863 ; -2.863 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  KEY[1]   ; MDF:comb_79|CLK_OUT ; -2.839 ; -2.839 ; Rise       ; MDF:comb_79|CLK_OUT ;
++-----------+---------------------+--------+--------+------------+---------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++--------------+---------------------+--------+--------+------------+---------------------+
+; Data Port    ; Clock Port          ; Rise   ; Fall   ; Clock Edge ; Clock Reference     ;
++--------------+---------------------+--------+--------+------------+---------------------+
+; LCD_DATA[*]  ; CLOCK_50            ; 9.494  ; 9.494  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[0] ; CLOCK_50            ; 8.931  ; 8.931  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[1] ; CLOCK_50            ; 9.193  ; 9.193  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[2] ; CLOCK_50            ; 9.452  ; 9.452  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[3] ; CLOCK_50            ; 9.494  ; 9.494  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[4] ; CLOCK_50            ; 9.411  ; 9.411  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[5] ; CLOCK_50            ; 9.137  ; 9.137  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[6] ; CLOCK_50            ; 9.478  ; 9.478  ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[7] ; CLOCK_50            ; 9.159  ; 9.159  ; Rise       ; CLOCK_50            ;
+; LCD_EN       ; CLOCK_50            ; 9.101  ; 9.101  ; Rise       ; CLOCK_50            ;
+; LCD_RS       ; CLOCK_50            ; 8.712  ; 8.712  ; Rise       ; CLOCK_50            ;
+; HEX0[*]      ; MDF:comb_79|CLK_OUT ; 11.765 ; 11.765 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[0]     ; MDF:comb_79|CLK_OUT ; 11.765 ; 11.765 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[1]     ; MDF:comb_79|CLK_OUT ; 11.733 ; 11.733 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[2]     ; MDF:comb_79|CLK_OUT ; 11.760 ; 11.760 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[3]     ; MDF:comb_79|CLK_OUT ; 11.532 ; 11.532 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[4]     ; MDF:comb_79|CLK_OUT ; 11.546 ; 11.546 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[5]     ; MDF:comb_79|CLK_OUT ; 11.523 ; 11.523 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[6]     ; MDF:comb_79|CLK_OUT ; 11.519 ; 11.519 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; HEX1[*]      ; MDF:comb_79|CLK_OUT ; 8.905  ; 8.905  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[0]     ; MDF:comb_79|CLK_OUT ; 8.552  ; 8.552  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[3]     ; MDF:comb_79|CLK_OUT ; 8.407  ; 8.407  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[4]     ; MDF:comb_79|CLK_OUT ; 8.427  ; 8.427  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[5]     ; MDF:comb_79|CLK_OUT ; 8.343  ; 8.343  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[6]     ; MDF:comb_79|CLK_OUT ; 8.905  ; 8.905  ; Rise       ; MDF:comb_79|CLK_OUT ;
+; LEDR[*]      ; MDF:comb_79|CLK_OUT ; 8.667  ; 8.667  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[0]     ; MDF:comb_79|CLK_OUT ; 8.400  ; 8.400  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[1]     ; MDF:comb_79|CLK_OUT ; 7.439  ; 7.439  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[4]     ; MDF:comb_79|CLK_OUT ; 8.667  ; 8.667  ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[5]     ; MDF:comb_79|CLK_OUT ; 8.177  ; 8.177  ; Rise       ; MDF:comb_79|CLK_OUT ;
++--------------+---------------------+--------+--------+------------+---------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                         ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; Data Port    ; Clock Port          ; Rise  ; Fall  ; Clock Edge ; Clock Reference     ;
++--------------+---------------------+-------+-------+------------+---------------------+
+; LCD_DATA[*]  ; CLOCK_50            ; 4.943 ; 4.943 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[0] ; CLOCK_50            ; 4.943 ; 4.943 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[1] ; CLOCK_50            ; 5.050 ; 5.050 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[2] ; CLOCK_50            ; 5.119 ; 5.119 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[3] ; CLOCK_50            ; 5.148 ; 5.148 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[4] ; CLOCK_50            ; 5.081 ; 5.081 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[5] ; CLOCK_50            ; 5.013 ; 5.013 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[6] ; CLOCK_50            ; 5.147 ; 5.147 ; Rise       ; CLOCK_50            ;
+;  LCD_DATA[7] ; CLOCK_50            ; 5.030 ; 5.030 ; Rise       ; CLOCK_50            ;
+; LCD_EN       ; CLOCK_50            ; 4.935 ; 4.935 ; Rise       ; CLOCK_50            ;
+; LCD_RS       ; CLOCK_50            ; 4.776 ; 4.776 ; Rise       ; CLOCK_50            ;
+; HEX0[*]      ; MDF:comb_79|CLK_OUT ; 4.885 ; 4.885 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[0]     ; MDF:comb_79|CLK_OUT ; 5.022 ; 5.022 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[1]     ; MDF:comb_79|CLK_OUT ; 4.994 ; 4.994 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[2]     ; MDF:comb_79|CLK_OUT ; 5.005 ; 5.005 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[3]     ; MDF:comb_79|CLK_OUT ; 4.906 ; 4.906 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[4]     ; MDF:comb_79|CLK_OUT ; 4.911 ; 4.911 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[5]     ; MDF:comb_79|CLK_OUT ; 4.892 ; 4.892 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX0[6]     ; MDF:comb_79|CLK_OUT ; 4.885 ; 4.885 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; HEX1[*]      ; MDF:comb_79|CLK_OUT ; 3.966 ; 3.966 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[0]     ; MDF:comb_79|CLK_OUT ; 4.126 ; 4.126 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[3]     ; MDF:comb_79|CLK_OUT ; 4.157 ; 4.157 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[4]     ; MDF:comb_79|CLK_OUT ; 4.177 ; 4.177 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[5]     ; MDF:comb_79|CLK_OUT ; 3.966 ; 3.966 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  HEX1[6]     ; MDF:comb_79|CLK_OUT ; 4.068 ; 4.068 ; Rise       ; MDF:comb_79|CLK_OUT ;
+; LEDR[*]      ; MDF:comb_79|CLK_OUT ; 4.076 ; 4.076 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[0]     ; MDF:comb_79|CLK_OUT ; 4.473 ; 4.473 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[1]     ; MDF:comb_79|CLK_OUT ; 4.076 ; 4.076 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[4]     ; MDF:comb_79|CLK_OUT ; 4.494 ; 4.494 ; Rise       ; MDF:comb_79|CLK_OUT ;
+;  LEDR[5]     ; MDF:comb_79|CLK_OUT ; 4.312 ; 4.312 ; Rise       ; MDF:comb_79|CLK_OUT ;
++--------------+---------------------+-------+-------+------------+---------------------+
+
+
++--------------------------------------------------------------+
+; Progagation Delay                                            ;
++------------+-------------+--------+--------+--------+--------+
+; Input Port ; Output Port ; RR     ; RF     ; FR     ; FF     ;
++------------+-------------+--------+--------+--------+--------+
+; KEY[0]     ; HEX0[0]     ; 16.351 ; 16.351 ; 16.351 ; 16.351 ;
+; KEY[0]     ; HEX0[1]     ; 16.319 ; 16.319 ; 16.319 ; 16.319 ;
+; KEY[0]     ; HEX0[2]     ; 16.346 ; 16.346 ; 16.346 ; 16.346 ;
+; KEY[0]     ; HEX0[3]     ; 16.118 ; 16.118 ; 16.118 ; 16.118 ;
+; KEY[0]     ; HEX0[4]     ; 16.132 ; 16.132 ; 16.132 ; 16.132 ;
+; KEY[0]     ; HEX0[5]     ; 16.109 ; 16.109 ; 16.109 ; 16.109 ;
+; KEY[0]     ; HEX0[6]     ; 16.105 ; 16.105 ; 16.105 ; 16.105 ;
+; KEY[0]     ; HEX1[0]     ; 13.187 ; 13.033 ; 13.033 ; 13.187 ;
+; KEY[0]     ; HEX1[3]     ; 13.254 ; 12.609 ; 12.609 ; 13.254 ;
+; KEY[0]     ; HEX1[4]     ; 13.274 ; 12.629 ; 12.629 ; 13.274 ;
+; KEY[0]     ; HEX1[5]     ; 12.978 ; 12.824 ; 12.824 ; 12.978 ;
+; KEY[0]     ; HEX1[6]     ; 13.107 ; 13.752 ; 13.752 ; 13.107 ;
+; KEY[0]     ; LEDR[0]     ; 12.890 ;        ;        ; 12.890 ;
+; KEY[0]     ; LEDR[4]     ;        ; 13.157 ; 13.157 ;        ;
+; KEY[0]     ; LEDR[5]     ;        ; 12.667 ; 12.667 ;        ;
+; KEY[1]     ; HEX0[0]     ; 15.972 ; 15.972 ; 15.972 ; 15.972 ;
+; KEY[1]     ; HEX0[1]     ; 15.940 ; 15.940 ; 15.940 ; 15.940 ;
+; KEY[1]     ; HEX0[2]     ; 15.967 ; 15.967 ; 15.967 ; 15.967 ;
+; KEY[1]     ; HEX0[3]     ; 15.739 ; 15.739 ; 15.739 ; 15.739 ;
+; KEY[1]     ; HEX0[4]     ; 15.753 ; 15.753 ; 15.753 ; 15.753 ;
+; KEY[1]     ; HEX0[5]     ; 15.730 ; 15.730 ; 15.730 ; 15.730 ;
+; KEY[1]     ; HEX0[6]     ; 15.726 ; 15.726 ; 15.726 ; 15.726 ;
+; KEY[1]     ; HEX1[0]     ; 12.654 ; 12.808 ; 12.808 ; 12.654 ;
+; KEY[1]     ; HEX1[3]     ; 12.230 ; 12.875 ; 12.875 ; 12.230 ;
+; KEY[1]     ; HEX1[4]     ; 12.250 ; 12.895 ; 12.895 ; 12.250 ;
+; KEY[1]     ; HEX1[5]     ; 12.445 ; 12.599 ; 12.599 ; 12.445 ;
+; KEY[1]     ; HEX1[6]     ; 13.373 ; 12.728 ; 12.728 ; 13.373 ;
+; KEY[1]     ; LEDR[0]     ;        ; 12.511 ; 12.511 ;        ;
+; KEY[1]     ; LEDR[4]     ; 12.778 ;        ;        ; 12.778 ;
+; KEY[1]     ; LEDR[5]     ; 12.288 ;        ;        ; 12.288 ;
++------------+-------------+--------+--------+--------+--------+
+
+
++----------------------------------------------------------+
+; Minimum Progagation Delay                                ;
++------------+-------------+-------+-------+-------+-------+
+; Input Port ; Output Port ; RR    ; RF    ; FR    ; FF    ;
++------------+-------------+-------+-------+-------+-------+
+; KEY[0]     ; HEX0[0]     ; 7.695 ; 7.695 ; 7.695 ; 7.695 ;
+; KEY[0]     ; HEX0[1]     ; 7.664 ; 7.915 ; 7.915 ; 7.664 ;
+; KEY[0]     ; HEX0[2]     ; 7.808 ; 7.672 ; 7.672 ; 7.808 ;
+; KEY[0]     ; HEX0[3]     ; 7.575 ; 7.575 ; 7.575 ; 7.575 ;
+; KEY[0]     ; HEX0[4]     ; 7.586 ; 7.715 ; 7.715 ; 7.586 ;
+; KEY[0]     ; HEX0[5]     ; 7.705 ; 7.572 ; 7.572 ; 7.705 ;
+; KEY[0]     ; HEX0[6]     ; 7.569 ; 7.569 ; 7.569 ; 7.569 ;
+; KEY[0]     ; HEX1[0]     ; 6.830 ; 6.835 ; 6.835 ; 6.830 ;
+; KEY[0]     ; HEX1[3]     ; 6.793 ; 6.581 ; 6.581 ; 6.793 ;
+; KEY[0]     ; HEX1[4]     ; 6.813 ; 6.601 ; 6.601 ; 6.813 ;
+; KEY[0]     ; HEX1[5]     ; 6.670 ; 6.675 ; 6.675 ; 6.670 ;
+; KEY[0]     ; HEX1[6]     ; 6.705 ; 6.546 ; 6.546 ; 6.705 ;
+; KEY[0]     ; LEDR[0]     ; 6.801 ;       ;       ; 6.801 ;
+; KEY[0]     ; LEDR[4]     ;       ; 6.895 ; 6.895 ;       ;
+; KEY[0]     ; LEDR[5]     ;       ; 6.670 ; 6.670 ;       ;
+; KEY[1]     ; HEX0[0]     ; 7.730 ; 7.730 ; 7.730 ; 7.730 ;
+; KEY[1]     ; HEX0[1]     ; 7.950 ; 7.699 ; 7.699 ; 7.950 ;
+; KEY[1]     ; HEX0[2]     ; 7.707 ; 7.784 ; 7.784 ; 7.707 ;
+; KEY[1]     ; HEX0[3]     ; 7.610 ; 7.610 ; 7.610 ; 7.610 ;
+; KEY[1]     ; HEX0[4]     ; 7.691 ; 7.621 ; 7.621 ; 7.691 ;
+; KEY[1]     ; HEX0[5]     ; 7.607 ; 7.681 ; 7.681 ; 7.607 ;
+; KEY[1]     ; HEX0[6]     ; 7.604 ; 7.604 ; 7.604 ; 7.604 ;
+; KEY[1]     ; HEX1[0]     ; 6.811 ; 6.865 ; 6.865 ; 6.811 ;
+; KEY[1]     ; HEX1[3]     ; 6.557 ; 6.828 ; 6.828 ; 6.557 ;
+; KEY[1]     ; HEX1[4]     ; 6.577 ; 6.848 ; 6.848 ; 6.577 ;
+; KEY[1]     ; HEX1[5]     ; 6.651 ; 6.705 ; 6.705 ; 6.651 ;
+; KEY[1]     ; HEX1[6]     ; 6.522 ; 6.740 ; 6.740 ; 6.522 ;
+; KEY[1]     ; LEDR[0]     ;       ; 6.778 ; 6.778 ;       ;
+; KEY[1]     ; LEDR[4]     ; 6.872 ;       ;       ; 6.872 ;
+; KEY[1]     ; LEDR[5]     ; 6.647 ;       ;       ; 6.647 ;
++------------+-------------+-------+-------+-------+-------+
+
+
++---------------------------------------------------------------------------------------+
+; Setup Transfers                                                                       ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; CLOCK_50            ; CLOCK_50            ; 1610     ; 0        ; 0        ; 0        ;
+; MDF:comb_79|CLK_OUT ; CLOCK_50            ; 78       ; 1        ; 0        ; 0        ;
+; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 50       ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------+
+; Hold Transfers                                                                        ;
++---------------------+---------------------+----------+----------+----------+----------+
+; From Clock          ; To Clock            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------+---------------------+----------+----------+----------+----------+
+; CLOCK_50            ; CLOCK_50            ; 1610     ; 0        ; 0        ; 0        ;
+; MDF:comb_79|CLK_OUT ; CLOCK_50            ; 78       ; 1        ; 0        ; 0        ;
+; MDF:comb_79|CLK_OUT ; MDF:comb_79|CLK_OUT ; 50       ; 0        ; 0        ; 0        ;
++---------------------+---------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 108   ; 108  ;
+; Unconstrained Output Ports      ; 26    ; 26   ;
+; Unconstrained Output Port Paths ; 119   ; 119  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Fri Jul 05 11:05:33 2019
+Info: Command: quartus_sta Mod_Teste -c Mod_Teste
+Info: qsta_default_script.tcl version: #1
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 2 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Mod_Teste.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name MDF:comb_79|CLK_OUT MDF:comb_79|CLK_OUT
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.847
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.847      -130.644 CLOCK_50 
+    Info (332119):    -1.136        -5.212 MDF:comb_79|CLK_OUT 
+Info (332146): Worst-case hold slack is -2.523
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.523        -2.523 CLOCK_50 
+    Info (332119):     0.391         0.000 MDF:comb_79|CLK_OUT 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -79.380 CLOCK_50 
+    Info (332119):    -0.500        -8.000 MDF:comb_79|CLK_OUT 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.829
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.829       -25.171 CLOCK_50 
+    Info (332119):     0.008         0.000 MDF:comb_79|CLK_OUT 
+Info (332146): Worst-case hold slack is -1.569
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.569        -1.569 CLOCK_50 
+    Info (332119):     0.215         0.000 MDF:comb_79|CLK_OUT 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -79.380 CLOCK_50 
+    Info (332119):    -0.500        -8.000 MDF:comb_79|CLK_OUT 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4641 megabytes
+    Info: Processing ended: Fri Jul 05 11:05:40 2019
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:02
+
+
